@@ -1,12 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import Container from 'react-bootstrap/Container'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    
+    <Container>
+      <h1>Hello</h1>
+    </Container>
   )
 }
 
