@@ -8,9 +8,9 @@ const SignUp = () => {
 
   return (
     <>
-        <Card>
+        <Card className="border-4 border-white">
             <Card.Body>
-                <h2 className="text-center mb-4">Sign In</h2>
+                <h2 className="text-center mb-4 ">Sign In</h2>
 
                 <Form>
                     <Form.Group id="email">
@@ -27,7 +27,7 @@ const SignUp = () => {
                         <Form.Label>Password Confirm</Form.Label>
                         <Form.Control type='password' ref={passwordConfirmationRef} required className="border-2 border-white rounded-md"/>
                     </Form.Group>
-                    <Button type="submit" className="w-100 border border-white">Sign Up</Button>
+                    <button type="submit" className="w-100 duration-150 ease-in-out hover:bg-green-600 p-2 rounded-xl mt-4 bg-green-500 text-black">Sign Up</button>
                 </Form>
             </Card.Body>
         </Card>
