@@ -1,5 +1,5 @@
 import React from 'react'
-import { PhoneIcon } from '@chakra-ui/icons'
+import { SearchIcon } from '@chakra-ui/icons'
 import { Flex, Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 
 type SearchInputProps = {
@@ -8,13 +8,31 @@ type SearchInputProps = {
 
 const SearchInput:React.FC<SearchInputProps> = () => {
   return (
-    <Flex>
+    <Flex flexGrow={1} mr={2} align='center'>
         <InputGroup>
             <InputLeftElement
                 pointerEvents='none'
-                children={<PhoneIcon color='gray.300' />}
+                children={<SearchIcon color='gray.300' mb={1}
+                />}
              />
-            <Input type='tel' placeholder='Phone number' />
+            <Input 
+              type='text' 
+              placeholder='Search Reddit' 
+              fontSize='10pt'
+              _placeholder= {{ color : 'grey.500'}}
+              _hover={{
+                bg: 'white',
+                border: '1px solid',
+                borderColor: 'blue.500',
+              }}
+              _focus={{
+                outline: 'none',
+                border: '1px solid',
+                borderColor: 'blue.500',
+              }}
+              height='34px'
+              bg='grey.50'
+            />
         </InputGroup>
     </Flex>
   )
