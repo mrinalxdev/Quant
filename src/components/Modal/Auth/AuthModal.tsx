@@ -28,7 +28,7 @@ const AuthModal: ReactFC = () => {
       <Modal isOpen={modelState.open} onClose={handleClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader textAlign= 'center'>Login</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <h1> Hello This is Mrinal's Modal</h1>
