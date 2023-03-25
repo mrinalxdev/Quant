@@ -46,7 +46,12 @@ const AuthModal: ReactFC = () => {
               align="center"
               justify="center"
               width="70"
-            ></Flex>
+              border='1px solid red'
+            >
+              {/* <OAtuhButtons /> */}
+              {/* <AuthInputs />  */}
+              {/* <ResetPassword /> */}
+            </Flex>
           </ModalBody>
         </ModalContent>
       </Modal>
