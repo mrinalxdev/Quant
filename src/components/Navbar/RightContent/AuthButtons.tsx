@@ -14,7 +14,7 @@ const AuthButtons: React.FC = () => {
         display={{ base: "none", sm: "flex" }}
         width={{ base: "70px", md: "110px" }}
         mr={2}
-        onClick={() =>  setAuthModelState({ open: true, view: 'Login Here'})}
+        onClick={() =>  setAuthModelState({ open: true, view: "login"})}
       >
         Log In
       </Button>
@@ -23,7 +23,7 @@ const AuthButtons: React.FC = () => {
         display={{ base: "none", sm: "flex" }}
         width={{ base: "70px", md: "110px" }}
         mr={2}
-        onClick={() =>  setAuthModelState({ open: true, view: 'SignUp Here'})}
+        onClick={() =>  setAuthModelState({ open: true, view: "signup"})}
       >
         Sign In
       </Button>
