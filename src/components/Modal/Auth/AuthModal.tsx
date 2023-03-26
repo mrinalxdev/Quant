@@ -30,9 +30,9 @@ const AuthModal: ReactFC = () => {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader textAlign="center">
-            {/* {modelState.view === "login" && "Login"}
-            {modelState.view === "signup" && "Sign Up"} */}
-            Auth Page
+            {modelState.view === "login" && "Login"}
+            {modelState.view === "signup" && "Sign Up"}
+            {/* Auth Page */}
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody
