@@ -30,7 +30,7 @@ const AuthModal: ReactFC = () => {
       <Modal isOpen={modelState.open} onClose={handleClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>
+          <ModalHeader textAlign='center'>
             {modelState.view === "login" && "Login"}
             {modelState.view === "signup" && "Sign Up"}
             {/* Auth Page */}
@@ -47,7 +47,7 @@ const AuthModal: ReactFC = () => {
               align="center"
               justify="center"
               width="70%"
-              border='1px solid red'
+              pb={6}
             >
               {/* <OAtuhButtons /> */}
               <AuthInputs /> 
