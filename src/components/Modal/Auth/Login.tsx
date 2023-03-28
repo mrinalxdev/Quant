@@ -78,7 +78,7 @@ const Login: React.FC<LoginProps> = () => {
           color="blue.500"
           fontWeight={700}
           cursor="pointer"
-          onCLick={() =>
+          onClick={() =>
             setAuthModelState((prev) => ({
               ...prev,
               view: "signup",
