@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input, Button, Flex, Text } from "@chakra-ui/react";
 import { useSetRecoilState } from "recoil";
-import { authModelAtom } from "../../../atoms/authModelAtom";
+import { authModelState } from "../../../atoms/authModelAtom";
 
 type LoginProps = {};
 
@@ -74,7 +74,17 @@ const Login: React.FC<LoginProps> = () => {
 
       <Flex fontSize="9pt" justifyContent="center">
         <Text mr={1}>New here ? </Text>
-        <Text color="blue.500" fontWeight={700} cursor="pointer">
+        <Text
+          color="blue.500"
+          fontWeight={700}
+          cursor="pointer"
+          onCLick={() =>
+            setAuthModelState((prev) => ({
+              ...prev,
+              view: "signup",
+            }))
+          }
+        >
           Sign Up
         </Text>
       </Flex>
