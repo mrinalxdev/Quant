@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@chakra-ui/react";
 import { useSetRecoilState } from "recoil";
-import { authModelState } from '../../../atoms/authModelAtom'
+import { authModelState } from "../../../atoms/authModelAtom";
 
 const AuthButtons: React.FC = () => {
   const setAuthModelState = useSetRecoilState(authModelState);
@@ -14,7 +14,7 @@ const AuthButtons: React.FC = () => {
         display={{ base: "none", sm: "flex" }}
         width={{ base: "70px", md: "110px" }}
         mr={2}
-        onClick={() =>  setAuthModelState({ open: true, view: "login"})}
+        onClick={() => setAuthModelState({ open: true, view: "login" })}
       >
         Log In
       </Button>
@@ -23,7 +23,7 @@ const AuthButtons: React.FC = () => {
         display={{ base: "none", sm: "flex" }}
         width={{ base: "70px", md: "110px" }}
         mr={2}
-        onClick={() =>  setAuthModelState({ open: true, view: "signup"})}
+        onClick={() => setAuthModelState({ open: true, view: "signup" })}
       >
         Sign In
       </Button>
