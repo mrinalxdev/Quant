@@ -8,7 +8,7 @@ type LoginProps = {};
 const Login: React.FC<LoginProps> = () => {
   const setAuthModelState = useSetRecoilState(authModelState);
 
-  const [loginFomr, setLoginForm] = useState({
+  const [loginForm, setLoginForm] = useState({
     email: "",
     password: "",
   });

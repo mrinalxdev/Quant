@@ -2,6 +2,7 @@ import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { useRecoilValue } from "recoil";
 import { authModelState } from "../../../atoms/authModelAtom";
+import SignUp from './SignUp'
 import Login from "./Login";
 
 type AuthInputsProps = {};
@@ -12,7 +13,7 @@ const AuthInputs: React.FC<AuthInputsProps> = () => {
   return (
     <Flex direction="column" align="center" width="100%" mt={4}>
       {modelState.view === "login" && <Login />}
-      {/* {modelState.view === 'signup' && <Signup /> } */}
+      {modelState.view === 'signup' && <SignUp /> }
     </Flex>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Input, Button, Flex, Text } from "@chakra-ui/react";
 import { useSetRecoilState } from "recoil";
 import { authModelState } from "../../../atoms/authModelAtom";
@@ -6,13 +6,14 @@ import { authModelState } from "../../../atoms/authModelAtom";
 const SignUp = () => {
   const setAuthModelState = useSetRecoilState(authModelState);
 
-  const [loginFomr, setLoginForm] = useState({
+  const [signUpForm, setSignUpForm] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
   });
 
   const onChange = (event: React.ChnageEvent<HTMLInputElement>) => {
-    setLoginForm((prev) => ({
+    setSignUpForm((prev) => ({
       ...prev,
       [event.target.name]: event.target.value,
     }));
@@ -89,3 +90,5 @@ const SignUp = () => {
     </form>
   );
 };
+
+export default SignUp;
