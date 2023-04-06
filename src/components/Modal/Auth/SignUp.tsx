@@ -66,13 +66,37 @@ const SignUp = () => {
         }}
         bg="grey.50"
       />
+      
+      <Input
+        name="confirmPassword"
+        placeholder="Confirm Password"
+        type="password"
+        mb={2}
+        onChange={onChange}
+        required
+        fontSize="10pt"
+        _placeholder={{ color: "grey.500" }}
+        _hover={{
+          bg: "white",
+          border: "1px solid",
+          borderColor: "blue.500",
+        }}
+        _focus={{
+          outline: "none",
+          bg: "white",
+          border: "1px solid",
+          borderColor: "blue.500",
+        }}
+        bg="grey.50"
+      />
+      
 
       <Button width="100%" height="36px" mt={2} mb={2} type="submit">
-        Log In
+        Sign Up 
       </Button>
 
       <Flex fontSize="9pt" justifyContent="center">
-        <Text mr={1}>New here ? </Text>
+        <Text mr={1}>Already have a account? </Text>
         <Text
           color="blue.500"
           fontWeight={700}
@@ -80,11 +104,11 @@ const SignUp = () => {
           onClick={() =>
             setAuthModelState((prev) => ({
               ...prev,
-              view: "signup",
+              view: "login",
             }))
           }
         >
-          Sign Up
+           Login
         </Text>
       </Flex>
     </form>
