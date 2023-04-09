@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Input, Button, Flex, Text } from "@chakra-ui/react";
 import { useSetRecoilState } from "recoil";
 import { authModelState } from "../../../atoms/authModelAtom";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../../../firebase/clientApp";
 
 const SignUp = () => {
   const setAuthModelState = useSetRecoilState(authModelState);
@@ -12,14 +14,28 @@ const SignUp = () => {
     confirmPassword: "",
   });
 
-  const onChange = (event: React.ChnageEvent<HTMLInputElement>) => {
+  const [error, setError] = useState("");
+
+  const [createUserWithEmailAndPassword, user, loading, userError] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSignUpForm((prev) => ({
       ...prev,
       [event.target.name]: event.target.value,
     }));
   };
 
-  const onSubmit = () => {};
+  const onSubmit = (event : React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    
+    if (signUpForm.password !== signUpForm.confirmPassword) {
+      setError(" Password do not match buddy ");
+      return;
+    }
+
+    createUserWithEmailAndPassword(signUpForm.email, signUpForm.password);
+  };
 
   return (
     <form onSubmit={onSubmit}>
@@ -66,7 +82,7 @@ const SignUp = () => {
         }}
         bg="grey.50"
       />
-      
+
       <Input
         name="confirmPassword"
         placeholder="Confirm Password"
@@ -89,10 +105,15 @@ const SignUp = () => {
         }}
         bg="grey.50"
       />
-      
+
+      {error && (
+        <Text textAlign="center" color="red" fontSize="10pt">
+          {error}
+        </Text>
+      )}
 
       <Button width="100%" height="36px" mt={2} mb={2} type="submit">
-        Sign Up 
+        Sign Up
       </Button>
 
       <Flex fontSize="9pt" justifyContent="center">
@@ -108,7 +129,7 @@ const SignUp = () => {
             }))
           }
         >
-           Login
+          Login
         </Text>
       </Flex>
     </form>
