@@ -26,9 +26,9 @@ const SignUp = () => {
     }));
   };
 
-  const onSubmit = (event : React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
     if (signUpForm.password !== signUpForm.confirmPassword) {
       setError(" Password do not match buddy ");
       return;
@@ -62,7 +62,7 @@ const SignUp = () => {
       />
       <Input
         name="password"
-        placeholder="Password"
+        placeholder="Enter Your Password"
         type="password"
         mb={2}
         onChange={onChange}
