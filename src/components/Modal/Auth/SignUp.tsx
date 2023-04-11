@@ -112,7 +112,14 @@ const SignUp = () => {
         </Text>
       )}
 
-      <Button width="100%" height="36px" mt={2} mb={2} type="submit">
+      <Button
+        width="100%"
+        height="36px"
+        mt={2}
+        mb={2}
+        type="submit"
+        isLoading={loading}
+      >
         Sign Up
       </Button>
 
