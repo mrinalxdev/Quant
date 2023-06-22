@@ -1,8 +1,17 @@
-import "./App.css"
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home/Home";
+import Navigation from "./components/shared/navbar/Navigation";
 
 function App() {
   return (
-    <h1>This is MindMingle</h1>
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
