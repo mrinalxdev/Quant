@@ -1,3 +1,4 @@
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -29,4 +30,9 @@ body {
     background-color: #001C30;
     color: #fff;
     font-family: 'Nunito Sans', sans-serif;
+}
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
 }
