@@ -1,26 +1,35 @@
-import React from 'react'
-import { Link } from "react-router-dom"
-import styles from './Home.module.css'
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import styles from "./Home.module.css";
+import Card from "../../components/Card/Card";
+import Button from "../../components/shared/button/Button";
 
 const Home = () => {
-  return (
-    <div className={styles.card}>
-      <div className={styles.headingWrapper}>
-        <span>👋</span>
-        <h1>Welcome to MindMingle !</h1>
-      </div>
-      <p>
-        We are working hard to get MindMingle ready for everyone! While <br /> we wrap up the finishing youches, we are adding people gradually <br /> to make sure nothing breaks
-      </p>
-      <div>
-        <button>Get your Username 👉 </button>
-      </div>
-      <div>
-        <span>Have an invite text ?</span>
-        <Link to="/login">Sign In</Link>
-      </div>
-    </div>
-  )
-}
 
-export default Home
+  const navigate = useNavigate()
+
+  const registerPage = () => {
+    navigate('/register')
+  }
+
+  return (
+    <div className={styles.cardWrapper}>
+      <Card title="Welcome to MindMingle !" logoText="👋">
+      <p className={styles.text}>
+          We are working hard to get MindMingle ready for everyone! While we
+          wrap up the finishing youches, we are adding people gradually to make
+          sure nothing breaks
+        </p>
+        <div>
+          <Button onClick={registerPage} text="Get your Username" />
+        </div>
+        <div className={styles.hasInvite}>
+          <span className={styles.footerText}>Have an invite text ?</span>
+          <Link to="/login" className={styles.login}>Sign In</Link>
+        </div>
+      </Card>
+    </div>
+  );
+};
+
+export default Home;

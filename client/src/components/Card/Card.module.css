@@ -22,20 +22,3 @@
     font-weight: bold;
     margin-left: 10px;
 }
-.text {
-    font-size: 18px;
-    line-height: 1.6;
-}
-.cardWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.hasInvite {
-    font-size: 11px;
-    color: black;
-}
-.login {
-    color: black;
-    padding: 0 6px;
-}
