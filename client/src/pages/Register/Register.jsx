@@ -22,7 +22,6 @@ const Register = () => {
     setStep(step + 1);
   };
 
-
   return (
     <div>
       <Step onClick={onClick} />

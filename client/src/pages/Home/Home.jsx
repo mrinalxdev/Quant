@@ -5,17 +5,16 @@ import Card from "../../components/Card/Card";
 import Button from "../../components/shared/button/Button";
 
 const Home = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const registerPage = () => {
-    navigate('/auth')
-  }
+    navigate("/auth");
+  };
 
   return (
     <div className={styles.cardWrapper}>
       <Card title="Welcome to MindMingle !" logoText="👋">
-      <p className={styles.text}>
+        <p className={styles.text}>
           We are working hard to get MindMingle ready for everyone! While we
           wrap up the finishing youches, we are adding people gradually to make
           sure nothing breaks
@@ -25,7 +24,9 @@ const Home = () => {
         </div>
         <div className={styles.hasInvite}>
           <span className={styles.footerText}>Have an invite text ?</span>
-          <Link to="/login" className={styles.login}>Sign In</Link>
+          <Link to="/login" className={styles.login}>
+            Sign In
+          </Link>
         </div>
       </Card>
     </div>
