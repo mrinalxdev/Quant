@@ -4,6 +4,15 @@ html {
     font-size: 16px;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #fff; 
+    border-radius: 10px;
+  }
+
+
 body,
 h1,
 h2,
