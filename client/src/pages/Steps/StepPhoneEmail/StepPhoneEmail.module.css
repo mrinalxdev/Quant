@@ -45,3 +45,9 @@
   background: #dafffb;
   color: #000;
 }
+.bottomPara {
+  color: #c4c4c4;
+  width: 70%;
+  font-size: 14px;
+  margin: 2px auto;
+}

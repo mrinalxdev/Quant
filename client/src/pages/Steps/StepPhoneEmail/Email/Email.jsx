@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from '../../../../components/Card/Card'
 import Button from '../../../../components/shared/button/Button'
+import Input from '../../../../components/shared/input/Input'
+import styles from "../StepPhoneEmail.module.css"
 
 const Email = () => {
+
+  const [emialInitials, setEmailInitials] = useState("")
+
   return (
     <>
     <div>
-    <Card title="Enter your Email ID  " logoText="📧">
+      <Card title="Enter Your Email ID" logoText="📧">
+        <Input value={emialInitials} onChange={(e) => setEmailInitials(e.target.value)} />
         <div>
+          <div>
           <Button text="Next" />
+
+          </div>
+          <p className={styles.bottomPara}>By entering your email initials you are agreeing to our Terms of Services and Privacy Policy , Thanks !</p>
         </div>
       </Card>
     </div>
