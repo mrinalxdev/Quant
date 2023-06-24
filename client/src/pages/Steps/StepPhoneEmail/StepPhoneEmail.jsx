@@ -8,7 +8,7 @@ const PhoneEmailMap = {
   email: Email,
 };
 
-const StepPhoneEmail = ({ onChange }) => {
+const StepPhoneEmail = ({ onNext }) => {
   const [authStep, setAuthStep] = useState("phone");
   const AuthStep = PhoneEmailMap[authStep];
 
@@ -33,7 +33,7 @@ const StepPhoneEmail = ({ onChange }) => {
               Verify through Email
             </button>
           </div>
-          <AuthStep onClick={onChange} />
+          <AuthStep onNext={onNext} />
         </div>
       </div>
     </>

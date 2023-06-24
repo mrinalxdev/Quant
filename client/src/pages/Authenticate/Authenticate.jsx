@@ -8,15 +8,15 @@ const steps = {
 };
 
 const Authenticate = () => {
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   const Step = steps[step];
 
-  const onClick = () => {
+  const onNext = () => {
     setStep(step + 1);
   };
   return (
     <div>
-      <Step onClick={onClick} />
+      <Step onNext={onNext} />
     </div>
   );
 };
