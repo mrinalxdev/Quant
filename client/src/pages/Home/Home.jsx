@@ -9,7 +9,7 @@ const Home = () => {
   const navigate = useNavigate()
 
   const registerPage = () => {
-    navigate('/register')
+    navigate('/auth')
   }
 
   return (

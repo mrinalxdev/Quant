@@ -1,0 +1,47 @@
+.cardWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+}
+.buttonWrap {
+  margin-bottom: -25px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+}
+.buttonPhone {
+  width: 100%;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.2s all;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #dafffb;
+  font-size: 15px;
+  border-radius: 20px;
+}
+.buttonPhone:hover {
+  background: #dafffb;
+  color: #000;
+}
+.buttonEmail {
+  width: 100%;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: 0.2s all;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #dafffb;
+  font-size: 15px;
+  border-radius: 20px;
+}
+.buttonEmail:hover {
+  background: #dafffb;
+  color: #000;
+}
+.active {
+  background: #dafffb;
+  color: #000;
+}

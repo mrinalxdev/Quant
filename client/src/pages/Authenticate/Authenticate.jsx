@@ -16,7 +16,6 @@ const Authenticate = () => {
   };
   return (
     <div>
-      Phone and Email
       <Step onClick={onClick} />
     </div>
   );
