@@ -4,3 +4,13 @@ Content-Type: application/json
 {
   "phone" : "+918528017761"
 }
+
+###
+POST http://localhost:5500/api/veriye-otp HTTP/1.1
+Content-Type: application/json
+
+{
+  "phone" : "+918528017761",
+  "opt" : "8838",
+  "hash" :  "624fe28f5194b2f68c21227ad4e0fadfdc941ffafed03849662046fbac05fda9.1687694898952"
+}
