@@ -25,6 +25,28 @@ class AuthController {
       res.status(500).json({ message: "message sending failed" });
     }
   }
+
+  verifyOtp(req, res) {
+    const { otp, phone } = req.body;
+    if (!otp || !hash || !phone) {
+      res.status(400).json({ message: "All feilds are required" });
+    }
+
+    const [hashedOtp, expires] = hash.split(".");
+    if (Date.now() > expires) {
+      res.status(400).json({ message: "OTP expired" });
+    }
+
+    const data = `${phone}.${otp}.${expires}`;
+    const isValid = otpService.verifyOtp(hashedOtp, data)
+    if (!isValid) {
+      res.status(400).json({ message : "Invalid OTP entered"})
+    }
+
+    let user ;
+    let accessToken;
+    let refreshToken;
+  }
 }
 
 module.exports = new AuthController();
