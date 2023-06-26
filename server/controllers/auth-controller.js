@@ -1,6 +1,7 @@
 const hashService = require("../services/hash-service");
 const otpService = require("../services/otp-service");
-const userService = require("../services/user-service.js");
+const userService = require("../services/user-service");
+const tokenService = require("../services/token-service")
 
 class AuthController {
   async sendOtp(req, res) {
@@ -28,7 +29,7 @@ class AuthController {
   }
 
   async verifyOtp(req, res) {
-    const { otp, phone } = req.body;
+    const { otp, phone, hash } = req.body;
     if (!otp || !hash || !phone) {
       res.status(400).json({ message: "All feilds are required" });
     }
@@ -45,8 +46,6 @@ class AuthController {
     }
 
     let user;
-    let accessToken;
-    let refreshToken;
 
     try {
       user = await userService.findUser({ phone });
@@ -59,7 +58,13 @@ class AuthController {
     }
 
     //Token
+    const { accessToken, refreshToken} = tokenService.generateTokens({ _id: user._id, activated : false })
 
+    res.cookie('refreshToken', refreshToken,  {
+      maxAge : 1000 * 60 * 60 *24 *30,
+      httpOnly : true
+    })
+    res.json({ accessToken })
 
   }
 }
