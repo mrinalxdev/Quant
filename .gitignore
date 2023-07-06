@@ -1,2 +1,4 @@
 # Directories
 node_modules
+dist
+.env
