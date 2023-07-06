@@ -18,7 +18,7 @@ class App {
     this.initialiseDatabaseConnection();
     this.initialiseMiddleware();
     this.initialiseControllers(controllers);
-    this.initialiseErrorHandlings();
+    this.initialiseErrorHandling();
   }
 
   private initialiseMiddleware(): void {
@@ -38,5 +38,19 @@ class App {
 
   private initialiseErrorHandling() : void{
     this.express.use(ErrorMiddleware())
+  }
+  
+  private initialiseDatabaseConnection() : void {
+    const { MONGO_USER, MONGO_PASSWORD, MONGO_PATH} = process.env;
+
+    mongoose.connect(
+        `mongodb+srv://${MONGO_USER}:${MONGO_PASSWORD}@nodeapi.2xgrubp.mongodb.net/`
+    )
+  }
+
+  public listen (): void {
+    this.express.listen(this.port, () => {
+        console.log(`App listening on port ${this.port}`)
+    })
   }
 }
