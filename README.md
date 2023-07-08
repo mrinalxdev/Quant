@@ -1,0 +1,1 @@
+# This is a Rest API for the Blogging platform
