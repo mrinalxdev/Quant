@@ -4,7 +4,7 @@ import compression from "compression";
 import cors from "cors";
 import morgan from "morgan";
 import helmet from 'helmet';
-import Controller from "@/utils/interfaces/controller.interfaces";
+import Controller from "@/utils/interfaces/controller.interface";
 import ErrorMiddleware from "@/middleware/error.middleware";
 
 class App {
@@ -37,7 +37,7 @@ class App {
   }
 
   private initialiseErrorHandling() : void{
-    this.express.use(ErrorMiddleware())
+    this.express.use(ErrorMiddleware)
   }
   
   private initialiseDatabaseConnection() : void {
