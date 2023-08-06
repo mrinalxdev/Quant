@@ -1,6 +1,6 @@
 import React from 'react'
-
-const listing = () => {
+import './Listing.css'
+const Listing = () => {
   return (
     <div>
       This is Listing Page
@@ -8,4 +8,4 @@ const listing = () => {
   )
 }
 
-export default listing
+export default Listing

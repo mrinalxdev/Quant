@@ -1,11 +1,12 @@
 import React from 'react'
+import './Top.css'
 
-const top = () => {
+const Top = () => {
   return (
     <div>
-      This is Top Section
+      This is  Section
     </div>
   )
 }
 
-export default top
+export default Top

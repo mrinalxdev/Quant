@@ -1,11 +1,11 @@
 import React from 'react'
 
-const activity = () => {
+const Acitvity = () => {
   return (
     <div>
-      This is Activity Page
+      Activity Section
     </div>
   )
 }
 
-export default activity
+export default Acitvity
