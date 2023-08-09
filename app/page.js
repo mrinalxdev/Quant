@@ -1,6 +1,17 @@
+"use client";
+import { useState } from "react";
 import FeedbackItem from "./components/FeedbackItem";
+import FeedbackModal from "./components/FeedbackModal";
+import Button from "./components/Button";
 
 export default function Home() {
+
+  const [showFeedbackModal, setShowFeedbackModal] = useState(false)
+
+  function openFeedbackModal() {
+    setShowFeedbackModal(true)
+  }
+
   return (
     <main className="bg-white md:max-w-2xl mx-auto md:shadow-lg md:rounded-lg md:mt-8 overflow-hidden">
       <div className="bg-gradient-to-r from-cyan-400 to-blue-500 p-8">
@@ -13,9 +24,12 @@ export default function Home() {
       <div className="bg-gray-100 px-8 py-4 text-right flex border-b-4 ">
         <div className="grow"></div>
         <div>
-          <button className="bg-blue-700 text-white px-4 py-2 rounded-md">
+          <Button
+            onClick={openFeedbackModal}
+            primary
+          >
             Make a suggestions
-          </button>
+          </Button>
         </div>
       </div>
       <div className="px-8">
@@ -26,6 +40,9 @@ export default function Home() {
         <FeedbackItem />
         <FeedbackItem />
       </div>
+      {showFeedbackModal && (
+        <FeedbackModal setShow={setShowFeedbackModal} />
+      )}
     </main>
   );
 }
