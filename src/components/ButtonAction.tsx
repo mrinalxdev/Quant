@@ -5,7 +5,7 @@ import React from "react";
 const ButtonAction = () => {
   return (
     <div>
-      <Link href="/edit/id" className="btn btn-primary mr-3">
+      <Link href="/edit/1" className="btn btn-primary mr-3">
       <PencilRuler /> Edit
       </Link>
       <button className="btn btn-error"> <Trash2 /> Delete</button>

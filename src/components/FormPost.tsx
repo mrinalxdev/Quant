@@ -6,9 +6,10 @@ import { useForm, SubmitHandler } from "react-hook-form";
 
 interface FormPostProps {
   submit: SubmitHandler<FormInputPost>;
+  label : string
 }
 
-const FormPost: FC<FormPostProps> = ({ submit }) => {
+const FormPost: FC<FormPostProps> = ({ submit, label }) => {
   const { register, handleSubmit } = useForm<FormInputPost>();
 
   return (
@@ -41,7 +42,7 @@ const FormPost: FC<FormPostProps> = ({ submit }) => {
         <option>Others</option>
       </select>
       <button type="submit" className="btn btn-primary w-full max-w-lg">
-        Create
+        {label}
       </button>
     </form>
   );
