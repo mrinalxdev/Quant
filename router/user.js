@@ -1,6 +1,9 @@
 const router = require("express").Router();
 const User = require("../Modals/User");
 const { body, validationResult } = require("express-validator");
+const bcrypt = require('bcrypt')
+const jwt = require("jsonwebtoken")
+const JWTSEC = "#2@$ndja45883 r7##"
 
 router.post(
   "/create/user",
