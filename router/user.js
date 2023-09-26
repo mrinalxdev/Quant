@@ -72,10 +72,10 @@ router.post(
         },
         JWTSEC
       );
-
-      res.status(200).json({ user, accessToken });
+      const { password, ...other } = user._doc;
+      res.status(200).json({ other, accessToken });
     } catch (error) {
-      res.status.json("Internal Sever Error")
+      res.status.json("Internal Sever Error");
     }
   }
 );
