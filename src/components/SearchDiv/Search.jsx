@@ -1,7 +1,7 @@
 import React from "react";
 import { AiOutlineCloseCircle, AiOutlineSearch } from "react-icons/ai";
 import { BsHouseDoor } from "react-icons/bs";
-import {CiLocationOn} from 'react-icons/ci'
+import { CiLocationOn } from "react-icons/ci";
 const Search = () => {
   return (
     <div className="searchDiv grid gap-10 bg-greyIsh rounded-[10px] p-[3rem]">
@@ -37,26 +37,40 @@ const Search = () => {
             <AiOutlineCloseCircle className="text-[30px] text-[#a5a6a6] hover:text-text-textColor icon hover:text-black" />
           </div>
 
-          <button className="bg-blueColor h-full p-5 px-10 rounded-[10px] text-white">Submit</button>
+          <button className="bg-blueColor h-full p-5 px-10 rounded-[10px] text-white">
+            Submit
+          </button>
         </div>
       </form>
 
       <div className="secDiv flex items-cennter gap-10 justify-ceter">
         <div className="singleSearch flex items-center gap-2">
-          <label htmlFor="relevance" className="text-[#808080] font-semibold">Sort by:</label>
+          <label htmlFor="relevance" className="text-[#808080] font-semibold">
+            Sort by:
+          </label>
 
-          <select name="" id="relevance" className="bg-white rounded-[3px] px-4 py-1">
+          <select
+            name=""
+            id="relevance"
+            className="bg-white rounded-[3px] px-4 py-1"
+          >
             <option value="">Relevance</option>
             <option value="">Inclusive</option>
             <option value="">Starts With</option>
             <option value="">Contains</option>
           </select>
         </div>
-        
-        <div className="singleSearch flex items-center gap-2">
-          <label htmlFor="type" className="text-[#808080] font-semibold">Type:</label>
 
-          <select name="" id="type" className="bg-white rounded-[3px] px-4 py-1">
+        <div className="singleSearch flex items-center gap-2">
+          <label htmlFor="type" className="text-[#808080] font-semibold">
+            Type:
+          </label>
+
+          <select
+            name=""
+            id="type"
+            className="bg-white rounded-[3px] px-4 py-1"
+          >
             <option value="">Full Time</option>
             <option value="">Remote</option>
             <option value="">Contract Based</option>
@@ -65,9 +79,15 @@ const Search = () => {
         </div>
 
         <div className="singleSearch flex items-center gap-2">
-          <label htmlFor="level" className="text-[#808080] font-semibold">Level:</label>
+          <label htmlFor="level" className="text-[#808080] font-semibold">
+            Level:
+          </label>
 
-          <select name="" id="level" className="bg-white rounded-[3px] px-4 py-1">
+          <select
+            name=""
+            id="level"
+            className="bg-white rounded-[3px] px-4 py-1"
+          >
             <option value="">Senior</option>
             <option value="">Mid-Level</option>
             <option value="">Junior</option>
